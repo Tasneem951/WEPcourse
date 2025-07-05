@@ -11,7 +11,7 @@
     </head> 
 
     <body style="background-color: rgb(249, 238, 249);">
-        <h1> This page for parents. </h1>
+        <h1 id="you"> This page for parents. </h1>
         <header>
             <main>
           
@@ -43,7 +43,19 @@
       <h1> </h1>
         <h3> need help? <a href="file:///C:/Users/2025/Desktop/Html/indexan.htm"> Click here! </a></h3>
               <footer>
+                <button onclick="myfun()"> Click me </button>
+                <p id="text"> </p>
         <i> <h6 style="color: plum;">Summer Camps </i></h6>
               </footer>
     </body>
+         <script>
+
+            var h6element= document.querySelector('h6');
+            h6element.innerHTML="this is javascript"
+            var you =document.getElementById('you');
+            you.innerHTML="you are now JS"
+            function myfun(){
+                var textVar =document.getElementById('text');
+              textVar.innerHTML ="thanks... u have clicked me!"}
+        </script>
 </html>
