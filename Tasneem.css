@@ -1,0 +1,35 @@
+body{
+    background-color:rgb(250, 198, 198);
+    color: white;
+    display: flexbox;
+    border: 10cap;
+    
+    
+}
+section{
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    background-color: rgb(138, 80, 80);
+    color:white;
+    border-radius: 15px;
+    
+  
+}
+.btn :hover{
+    background-color: purple;
+   
+}
+img{
+    width: 80%;
+    height: 500px;
+    border-radius: 12px;
+   
+}
+p{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+}

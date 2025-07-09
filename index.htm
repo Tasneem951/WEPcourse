@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>RT PIZZA</title>
+     <link rel="stylesheet" href="Tasneem.css">
+    </head>
+    <body>
+       <article>
+        <img src="pizza.jpg">
+       </article>
+        <main>
+            <form> 
+                <section>
+                    <h1>Choose pizza size</h1>
+                    <label><input type="radio" name="size" value="10">Small (10$)</label>
+                    <label><input type="radio" name="size" value="15">Medium (15$)</label>
+                    <label><input type="radio" name="size" value="20">Small (20$)</label>
+                </section>
+                <section>
+                    <h1>Choose toppings(2$each)</h1>
+                    <label><input type="checkbox" value="2$">Cheese</label>
+                    <label><input type="checkbox" value="2$"> Pepperoni</label>
+                    <label><input type="checkbox" value="2$">Mushrooms</label>
+           
+                </section>
+                <button class="btn" type="button" onclick="calculatePrice()">Calculate</button>
+                             <aside>
+        <p id="total">Total: $0</p>
+        </aside>
+            </form>
+        </main>
+        </main>
+     
+    </body>
+    
+  <script>
+    function calculatePrice() {
+  
+      let sizeRadios = document.getElementsByName('size');
+      let sizePrice = 0;
+      for (let radio of sizeRadios) {
+        if (radio.checked) {
+          sizePrice = parseFloat(radio.value);
+          break;
+        }
+      }
+
+     
+      let toppings = document.querySelectorAll('input[type="checkbox"]:checked');
+      let toppingsPrice = toppings.length * 2;
+
+
+      let total = sizePrice + toppingsPrice;
+
+      
+      document.getElementById('total').textContent = "Total: $" + total;
+    }
+  </script>
+</html>
